@@ -19,19 +19,19 @@ const PaymentLayout = ({
   const { step } = usePayment();
 
   return (
-    <div className="min-h-screen bg-background py-8 px-4 animate-fadeIn">
+    <div className="min-h-screen py-8 px-4">
       <div className="max-w-3xl mx-auto">
         {showBack && step < 4 && (
           <button
             onClick={onBack}
-            className="flex items-center text-muted-foreground hover:text-foreground transition-colors mb-6"
+            className="flex items-center text-medium-gray hover:text-charcoal transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back
+            Voltar
           </button>
         )}
         <ProgressSteps />
-        <div className="bg-white rounded-xl shadow-sm border border-muted p-8">
+        <div className="card">
           <h1 className="text-2xl font-semibold text-center mb-8">{title}</h1>
           {children}
         </div>
